@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 const Reschedulebooking = React.lazy(() => import("pages/Reschedulebooking"));
 const Cancelbooking = React.lazy(() => import("pages/Cancelbooking"));
@@ -80,7 +79,6 @@ const ProjectRoutes = () => {
           <Route path="/forgotpassword" element={<Forgotpassword />} />
           <Route path="/cancelbooking" element={<Cancelbooking />} />
           <Route path="/reschedulebooking" element={<Reschedulebooking />} />
-          <Route path="/dhiwise-dashboard" element={<Home />} />
         </Routes>
       </Router>
     </React.Suspense>
