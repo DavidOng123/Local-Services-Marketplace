@@ -31,15 +31,23 @@ const ServicelistPage = () => {
               Browse through a wide range of services offered by reliable
               providers in your area.
             </Text>
-            <Img
-              className="h-9 w-[360px]"
-              src="images/img_input.svg"
-              alt="input"
-            />
+            <Input
+              name="textfield"
+              placeholder="Type here"
+              value={textfieldvalue}
+              onChange={(e) => setTextfieldvalue(e)}
+              className="!placeholder:text-black-900_7f !text-black-900_7f font-roboto p-0 text-left text-sm h-9 w-[360px] "
+              wrapClassName="flex sm:w-full"
+              shape="round"
+              color="black_900_19"
+              size="xs"
+              variant="outline"
+            ></Input>
             <div className="flex flex-col items-start justify-start w-auto">
               <Button
                 className="cursor-pointer font-medium text-base text-center w-40"
                 shape="round"
+                onClick={() => navigate("/searchresult")}
               >
                 Search
               </Button>
