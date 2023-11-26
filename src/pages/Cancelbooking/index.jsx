@@ -1,11 +1,18 @@
-import React from "react";
-
 import { useNavigate } from "react-router-dom";
-
+import React, { useState } from "react";
 import { Button, Line, Text } from "components";
 
 const CancelbookingPage = () => {
   const navigate = useNavigate();
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const handleYesClick = () => {
+    setShowSuccessMessage(true);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 3000); 
+  };
 
   return (
     <>
@@ -37,7 +44,7 @@ const CancelbookingPage = () => {
             <div className="flex flex-row gap-3 items-start justify-start w-auto">
               <Button
                 className="common-pointer cursor-pointer font-medium text-base text-center w-40"
-                onClick={() => navigate("/loginpage")}
+                onClick={() => navigate("/bookingpage")}
                 shape="round"
                 variant="outline"
               >
@@ -45,7 +52,7 @@ const CancelbookingPage = () => {
               </Button>
               <Button
                 className="common-pointer cursor-pointer font-medium text-base text-center w-40"
-                onClick={() => navigate("/")}
+                onClick={() => handleYesClick()}
                 shape="round"
               >
                 Yes
@@ -54,6 +61,16 @@ const CancelbookingPage = () => {
           </div>
           <Line className="bg-black-900_19 h-px w-full" />
         </div>
+        {showSuccessMessage && (
+          <div className="flex items-center justify-center w-full">
+            <Text
+              className="text-base text-black-900 text-center w-auto"
+              size="txtRobotoRegular16"
+            >
+              Booking successfully canceled!
+            </Text>
+          </div>
+        )}
       </div>
     </>
   );

@@ -90,6 +90,23 @@ const SignuppagePage = () => {
                   className="text-black-900 text-sm w-full"
                   size="txtRobotoMedium14"
                 >
+                  Address
+                </Text>
+                <Input
+                  name="textfield_Two"
+                  placeholder=""
+                  className="p-0 w-full"
+                  wrapClassName="border border-black-900_19 border-solid flex h-9 w-full"
+                  shape="round"
+                  color="white_A700"
+                  variant="fill"
+                ></Input>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-center w-[600px] md:w-full">
+                <Text
+                  className="text-black-900 text-sm w-full"
+                  size="txtRobotoMedium14"
+                >
                   Password
                 </Text>
                 <Input
