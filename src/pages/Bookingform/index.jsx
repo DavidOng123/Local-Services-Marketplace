@@ -83,6 +83,24 @@ const BookingformPage = () => {
                   className="text-black-900 text-sm w-full"
                   size="txtRobotoMedium14"
                 >
+                  Location
+                </Text>
+                <Input
+                  name="textfield_Three"
+                  placeholder="Location"
+                  className="p-0 placeholder:text-black-900_7f text-left text-sm w-full"
+                  wrapClassName="border border-black-900_19 border-solid w-full"
+                  shape="round"
+                  color="white_A700"
+                  size="sm"
+                  variant="fill"
+                ></Input>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-center w-[600px] md:w-full">
+                <Text
+                  className="text-black-900 text-sm w-full"
+                  size="txtRobotoMedium14"
+                >
                   Specific Requirements
                 </Text>
                 <Input

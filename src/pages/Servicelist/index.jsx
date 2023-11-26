@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Input, Line, List, Text } from "components";
 import Header1 from "components/Header1";
-
+import FilterBox from "components/FilterAndSortBox"; 
 import { CloseSVG } from "../../assets/images";
 
 const ServicelistPage = () => {
@@ -31,15 +31,23 @@ const ServicelistPage = () => {
               Browse through a wide range of services offered by reliable
               providers in your area.
             </Text>
-            <Img
-              className="h-9 w-[360px]"
-              src="images/img_input.svg"
-              alt="input"
-            />
+            <Input
+              name="textfield"
+              placeholder="Type here"
+              value={textfieldvalue}
+              onChange={(e) => setTextfieldvalue(e)}
+              className="!placeholder:text-black-900_7f !text-black-900_7f font-roboto p-0 text-left text-sm h-9 w-[360px] "
+              wrapClassName="flex sm:w-full"
+              shape="round"
+              color="black_900_19"
+              size="xs"
+              variant="outline"
+            ></Input>
             <div className="flex flex-col items-start justify-start w-auto">
               <Button
                 className="cursor-pointer font-medium text-base text-center w-40"
                 shape="round"
+                onClick={() => navigate("/searchresult")}
               >
                 Search
               </Button>
@@ -160,6 +168,8 @@ const ServicelistPage = () => {
               >
                 All Services
               </Text>
+              <FilterBox
+              />
               <div className="gap-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-center justify-center py-5 w-full">
                 <div
                   className="common-pointer border border-black-900_19 border-solid flex flex-1 flex-col items-center justify-start rounded-md w-full"
