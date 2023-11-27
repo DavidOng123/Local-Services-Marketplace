@@ -168,8 +168,7 @@ const ServicelistPage = () => {
               >
                 All Services
               </Text>
-              <FilterBox
-              />
+              <FilterBox/>
               <div className="gap-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-center justify-center py-5 w-full">
                 <div
                   className="common-pointer border border-black-900_19 border-solid flex flex-1 flex-col items-center justify-start rounded-md w-full"
