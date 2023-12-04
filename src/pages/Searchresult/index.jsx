@@ -145,7 +145,7 @@ const SearchresultPage = () => {
               className="text-black-900 text-center text-xl w-full"
               size="txtRobotoRegular20"
             >
-              © 2022 Local Services Marketplace. All rights reserved.
+              © 2023 Local Services Marketplace. All rights reserved.
             </Text>
           </div>
         </footer>
